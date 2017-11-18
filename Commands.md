@@ -38,3 +38,12 @@ end
 $ rails routes
 ```
 * Check this: [Routing Guide](http://guides.rubyonrails.org/routing.html)
+
+# Create CRUD's
+### Generate Controllers
+```bash
+$ rails generate controller [ControllerName]
+...
+$ rails generate controller Articles
+```
+* Use Plural and CamelCase for names
