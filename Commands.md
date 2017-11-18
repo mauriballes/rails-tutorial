@@ -80,3 +80,11 @@ $ rails generate model Article title:string text:text
 ```bash
 $ rails db:migrate
 ```
+### Strong Parameters
+* This a Security Rails feature for permitting send parameters from a form,
+for access then we need to specify then:
+```ruby
+params.require(:form_scope_obj).permit(:param1, :param2)
+# ...
+params.require(:article).permit(:title, :text)
+```
