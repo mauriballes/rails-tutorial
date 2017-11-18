@@ -88,3 +88,6 @@ params.require(:form_scope_obj).permit(:param1, :param2)
 # ...
 params.require(:article).permit(:title, :text)
 ```
+### redirect_to
+* When you pass an Model object to this method, this redirect for Controller
+show method
