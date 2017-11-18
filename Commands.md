@@ -67,3 +67,16 @@ $ rails generate controller Articles
 ```
 * scope: When you call form_with, you pass it an identifying scope for this form. In this case, it's the symbol :article. This tells the form_with helper what this form is for.
 * url: Urls for the forms. To see urls options to use you can check `rails routes`
+### Generate Models
+```bash
+$ rails generate model [ModelName] [attribute]:[data_type] [attribute]:[data_type]
+...
+$ rails generate model Article title:string text:text
+```
+* Use Singular and CamelCase for Model name
+* Use Singular and lowercase for attributes
+
+##### This generate a Model class and a Migrations, you can run migration using:
+```bash
+$ rails db:migrate
+```
