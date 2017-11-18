@@ -47,3 +47,23 @@ $ rails generate controller [ControllerName]
 $ rails generate controller Articles
 ```
 * Use Plural and CamelCase for names
+### Forms on Rails
+```erbruby
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+```
+* scope: When you call form_with, you pass it an identifying scope for this form. In this case, it's the symbol :article. This tells the form_with helper what this form is for.
+* url: Urls for the forms. To see urls options to use you can check `rails routes`
