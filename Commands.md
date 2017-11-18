@@ -21,3 +21,20 @@ at app/controllers/welcome_controller.rb and the view, located
 at app/views/welcome/index.html.erb.
 
 * Folder Views for a controller: app/views/controller_name/
+
+### Routing
+```ruby
+# config/routes.rb
+Rails.application.routes.draw do
+  get 'welcome/index'
+ 
+  resources :articles # Collect of routes for making a CRUD
+ 
+  root 'welcome#index' # Home Page
+end
+```
+* You can check all app routes
+```bash
+$ rails routes
+```
+* Check this: [Routing Guide](http://guides.rubyonrails.org/routing.html)
