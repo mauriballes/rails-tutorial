@@ -90,4 +90,11 @@ params.require(:article).permit(:title, :text)
 ```
 ### redirect_to
 * When you pass an Model object to this method, this redirect for Controller
-show method
+show method. Example: redirect_to @article
+
+### link_to
+* Generate a link `<a>` passing a name and href
+Example: link_to 'Show', article_path(article)
+### model_path
+* Generate the url for show method from this model
+Example: article_path(article), This get the show url from Article Controller
