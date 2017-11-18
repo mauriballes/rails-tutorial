@@ -98,3 +98,18 @@ Example: link_to 'Show', article_path(article)
 ### model_path
 * Generate the url for show method from this model
 Example: article_path(article), This get the show url from Article Controller
+### Links
+You can view your options of paths writing:
+```bash
+$ rails routes
+```
+
+|   Prefix	   |        URI Pattern         |
+|--------------|----------------------------|
+|welcome_index |/welcome/index(.:format)    |  
+|     articles |/articles(.:format)         |            
+|  new_article |/articles/new(.:format)     |  
+| edit_article |/articles/:id/edit(.:format)| 
+|      article |/articles/:id(.:format)     |     
+|         root |/                           |
+You only need to add `_path` to the prefix and send the param if it's required
