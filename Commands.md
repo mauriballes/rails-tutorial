@@ -113,3 +113,22 @@ $ rails routes
 |      article |/articles/:id(.:format)     |     
 |         root |/                           |
 You only need to add `_path` to the prefix and send the param if it's required
+
+### Validations on Models
+You can check the types of validations on [Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html).
+When you have an exception for this validations you can check on the view.
+```erbruby
+ <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@article.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+```
