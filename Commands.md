@@ -134,4 +134,5 @@ When you have an exception for this validations you can check on the view.
 ```
 ### form_with
 Check this: [form_with](http://api.rubyonrails.org/v5.1.4/classes/ActionView/Helpers/FormHelper.html#method-i-form_with)
- 
+### Partials
+Check this: [Partials](http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials) 
